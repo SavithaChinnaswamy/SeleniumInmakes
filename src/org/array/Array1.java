@@ -1,43 +1,64 @@
 package org.array;
 
+import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
 public class Array1 
 {
 	public static void main(String[] args)
 	{
-		int A[] = new int [9];
+		Map<Integer, String> mp = new LinkedHashMap<>();
 		
-		A [0]=10;
-		A [1]=20;
-		A [2]=30;
-		A [3]=90;
-		A [4]=10;
-		A [5]=10;
-		A [6]=40;
-		A [7]=50;
-		A [8]=10;
+		mp.put(10, "savi");
+		mp.put(20, "kani");
+		mp.put(30, "maya");
 		
-		System.out.println("Elements before replacing:");
 		
-		for(int i=0; i<A.length; i++)
+		System.out.println(mp);
+		
+		Set<Integer> keySet = mp.keySet();
+		System.out.println(keySet);
+		
+		Collection<String> v = mp.values();
+		System.out.println(v);
+		
+		Set<Entry<Integer, String>> ent = mp.entrySet();
+		System.out.println(ent);
+		
+		for (Entry<Integer, String> e : ent)
 		{
-			System.out.println(A[i]);
+			Integer key = e.getKey();
+			System.out.println(key);
+			
+			String ve= e.getValue();
+			System.out.println(ve);
+			
 		}
+
+		
 	
 		
 		
-		System.out.println("Elements after replacing:");
 		
-	for(int i=0; i<A.length; i++)
-	{
-		if(A[i]==10)  
-		{
-			A[i]=100; 
-		}
-		System.out.println(A[i]);
-	}
 		
+		
+		
+	
+		
+		
+		
+		
+		
+	
 	}
-
+	
+	
 }
 
 
